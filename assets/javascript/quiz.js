@@ -70,7 +70,7 @@ var anwsersToDisplay = "";
 var choiceLabels=['A', 'B', 'C', 'D'];
 
 //counter for the countdown setting - in second
-var counter = 31;
+var counter = 61;
 
 //count variables for the quiz result
 var numberOfRightAnswers = 0;
@@ -81,7 +81,7 @@ var numberOfUnAnwsered = 0;
 // name of the radio button would be 'Q'+ the question index of the quiz contents
 // value for each radio selection would be the anwser choice index for the specific question
 // also setup anwsersToDisplay for later display when needed
-function displayQuestions(){
+function initQuestions(){
   $.each(questions, function(qIndex, value){
     $('ol').append('<li><p>' + this.question + '</p>');
      $.each(this.choices, function(aIndex, choice){
@@ -128,12 +128,12 @@ function startQuiz(){
   $('#result').css('display', 'none');
   $('#start-button').css('display', 'none');
 
-  //rest the selection and display the questions with selections
+  //reset all the selections and display the questions with selections
   $("input[type='radio']").prop('checked',false);
   $('#questions').css('display', 'block');
 
   //1 Minutes is given for the quiz
-  counter = 31; 
+  counter = 61; 
 
   //display quiz countdown timer
   $('#countdown').css('display', 'block');
@@ -141,7 +141,7 @@ function startQuiz(){
   //every second check the counter and take actions based on the counter value
   var timeCounter = setInterval(timeCheck, 1000);
   function timeCheck(){
-    if(counter == 0){ //time's up
+    if(counter == 1){ //time's up as we start from 61
       //stop checking every second
       clearInterval(timeCounter);
       
@@ -174,7 +174,7 @@ function startQuiz(){
 $(document).ready(function(){
   // setup the questions but hide them
   $('#questions').css('display', 'none');
-  displayQuestions();
+  initQuestions();
 
   //hide quiz countdown timer
   $('#countdown').css('display', 'none');
