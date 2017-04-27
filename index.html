@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <div id='quiz-heading'>
+      <h1>jQuery Quiz</h1>
+      <p id='countdown'>Number Of Seconds Left:  <strong id='numberOfSecLeft'></strong></p>
+      <div id='result'>
+          <p>Number Of Right Answers:  <strong id='numberOfRightAnswers'></strong></p>
+          <p>Number Of Wrong Answers:  <strong id='numberOfWrongAnswers'></strong></p>
+          <p>Number Of UnAnwsered:  <strong id='numberOfUnAnwsered'></strong></p>
+          <p>Check out all the correct answers: <strong id='correctAnswers'></strong></p>
+      </div>
+    </div>
+  </div> 
+  <div class="panel-body">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+      		<ol id='questions'></ol>
+          <div id='start-button'><input type="button" value="Start"></div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- container -->
+  </div>  <!-- panel-body -->
+  <div class="panel-footer">
+    <footer>
+      Copyright &copy; 2017 Xiaoying Wen
+    </footer> 
+  </div>
+  </div> <!-- panel panel-default -->
+  <script src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/javascript/quiz.js"></script>
+</body>
+</html>

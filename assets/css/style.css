@@ -1,0 +1,25 @@
+footer {
+  padding: 30px 0;
+  font-size: 12px;
+  color: #fff;
+  color: #ccc;
+  text-align: center;
+  background: #666;
+  border-top: 8px solid #4aaaa5;
+}
+
+#quiz-heading{
+  margin-left: 25%;
+}
+
+#start-button{
+  margin-left: 25%;
+}
+
+/*have to set height otherwise, the overflow-y: auto to keep the heading stay won't work*/
+.panel-body{
+  background: url('../images/bkgd.jpg');
+  background-size: cover;
+  height:500px;
+  overflow-y: auto
+}
